@@ -1,0 +1,110 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*登录CSS*/
+.main_body{
+	width: 100%;
+	min-width: 960px;
+	height: 440px;
+	background-color: #F1F1F1;
+	margin-top: 10px;
+}
+.main_body .main_login{
+	width: 90%;
+	height: 420px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.main_body .main_login img.login_banner{
+	margin-left: 30px;
+	margin-top: 20px;
+}
+.main_body .main_login .login_box{
+	width: 320px;
+	height: 380px;
+	float: right;
+	background-color:#FFFFFF;
+}
+.main_body .main_login .login_box .login_title{
+	height: 50px;
+	display: block;
+	color: #FFFFFF;
+}
+.main_body .main_login .login_box .login_title h2{
+	width: 280px;
+	height: 50px;
+	line-height:50px;
+	display: block;
+	margin-top: 10px;
+	margin-left: -20px;
+	padding-left: 40px;
+	background-color: #0099CC;
+	position: relative;
+}
+.main_body .main_login .login_box .login_title h2 img{
+	position: absolute;
+	left: 0;
+	bottom: -20px;
+}
+.main_body .main_login .login_box form{
+	width: 260px;
+	display: block;
+	margin: 30px auto 0;
+}
+.main_body .main_login .login_box p{
+	margin-top: 5px;
+	height: 36px;
+	line-height: 36px;
+}
+.main_body .main_login .login_box b{
+	height: 20px;
+	width: 100px;
+	display: block;
+	line-height: 20px;
+	font-size: 12px;
+	color: #FF0000;
+}
+.main_body .main_login .login_box input[type=text], 
+.main_body .main_login .login_box input[type=password]{
+	width: 205px;
+	height: 24px;
+	background-color: #FFFFFF;
+}
+.main_body .main_login .login_box input[type=submit]{
+	width: 260px;
+	height: 36px;
+	line-height: 36px;
+	margin: 10px auto;
+	color: #3399FF;
+	border: 1px solid #3399FF;
+	font-size: 22px;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+.main_body .main_login .login_box input[type=submit]:hover{
+	color: #55BBFF;
+	border: 1px solid #55BBFF;
+}
+.main_body .main_login .login_box a.to_reg{
+	width: 100px;
+	margin: 0 auto;
+	text-align: center;
+	cursor: pointer;
+	color: #0099CC;
+}
+.main_body .main_login .login_box a.to_reg:hover,
+.main_body .main_login .login_box a.to_pwd:hover{
+	text-decoration: underline;
+}
+.main_body .main_login .login_box a.to_pwd{
+	width: 100px;
+	margin: 5px auto;
+	text-align: center;
+	cursor: pointer;
+	color: #0099CC;
+	font-size: 14px;
+}
+.login_box .choose_box{
+	height: 30px;
+	line-height: 30px;
+}

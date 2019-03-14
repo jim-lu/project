@@ -1,0 +1,156 @@
+@CHARSET "UTF-8";
+
+.main{
+	width: 100%;
+	min-width: 960px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: #CCCCCC;
+	background-image: url(../img/bg.jpg);
+}
+
+/*顶部CSS*/
+.main .center{
+	width: 960px;
+	height: 259px;
+	margin: 10px auto;
+	background-color: #FFFFFF;
+	background-image: url(../img/center_bg.png);
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.main .center .head_img{
+	width: 180px;
+	height: 180px;
+	border-radius: 180px;
+	margin: 20px 0 0 20px;
+	float: left;
+	background-color: #CCCCCC;
+}
+.main .center .head_img img{
+	width: 180px;
+	height: 180px;
+	border-radius: 180px;
+}
+.main .center .student_info{
+	width: 500px;
+	height: 200px;
+	margin: 20px 0 0 100px;
+	float: left;
+}
+.main .center .student_info p{
+	height: 40px;
+	line-height: 40px;
+}
+.main .center .student_info p.student_name{
+	font-size: 24px;
+	font-weight: bold;
+}
+.main .center img.gdufs{
+	display: block;
+	float: left;
+	margin-top: 20px;
+}
+.main .center ul{
+	width: 760px;
+	height: 40px;
+	line-height: 40px;
+	float: right;
+}
+.main .center ul li{
+	float: left;
+	width: 190px;
+	text-align: center;
+}
+.main .center ul li a{
+	display: inline;
+	cursor: pointer;
+	font-weight: 600;
+}
+.main .center ul li a:hover{
+	text-decoration: underline;
+}
+
+/*内容部分CSS*/
+.main .content{
+	width: 960px;
+	margin: 10px auto;
+	padding-bottom: 20px;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+/*学生简介部分*/
+.main .content .panel{
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+	padding: 20px 0;
+	border-bottom: 1px solid #3399FF;
+}
+.main .content .panel .panel_title{
+	height: 60px;
+	line-height: 60px;
+	font-weight: bold;
+	color: #3399FF;
+	font-size: 16px;
+}
+.main .content .panel .panel_content{
+	text-indent: 28px;
+	font-size: 14px;
+	padding: 20px 0;
+}
+/*课程部分*/
+.table{
+	width: 798px;
+	margin: 20px auto;
+	text-align: center;
+	border: 1px solid #3399FF;
+}
+.table tr{
+	height: 30px;
+	line-height: 30px;
+}
+/*作业部分*/
+ul.homework_list{
+	margin-top: 20px;
+}
+ul.homework_list li{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dotted #999999;
+}
+ul.homework_list li a{
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	float: left;
+}
+ul.homework_list li a:hover{
+	color: #3399FF;
+}
+ul.homework_list li b{
+	diplay: inline-block;
+	float: left;
+	font-size: 14px;
+	color: #999999;
+}
+ul.homework_list li i{
+	width: 40px;
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	color: #FFFFFF;
+	display: inline-block;
+	float: left;
+	margin: 2px;
+	background-color: #CCCCCC;
+}
+ul.homework_list li i.active{
+	background-color: #FF0000;
+}
+ul.homework_list li span{
+	display: inline-block;
+	float: right;
+	font-size: 12px;
+	color: #999999;
+}

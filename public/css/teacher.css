@@ -1,0 +1,466 @@
+@CHARSET "UTF-8";
+
+.main{
+	width: 100%;
+	min-width: 960px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: #CCCCCC;
+	background-image: url(../img/bg.jpg);
+}
+
+/*顶部CSS*/
+.main .center{
+	width: 960px;
+	height: 259px;
+	margin: 10px auto;
+	background-color: #FFFFFF;
+	background-image: url(../img/center_bg.png);
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.main .center .head_img{
+	width: 180px;
+	height: 180px;
+	border-radius: 180px;
+	margin: 20px 0 0 20px;
+	float: left;
+	background-color: #CCCCCC;
+}
+.main .center .head_img img{
+	width: 180px;
+	height: 180px;
+	border-radius: 180px;
+}
+.main .center .teacher_info{
+	width: 500px;
+	height: 200px;
+	margin: 20px 0 0 100px;
+	float: left;
+}
+.main .center .teacher_info p{
+	height: 40px;
+	line-height: 40px;
+}
+.main .center .teacher_info p.teacher_name{
+	font-size: 24px;
+	font-weight: bold;
+}
+.main .center img.gdufs{
+	display: block;
+	float: left;
+	margin-top: 20px;
+}
+.main .center ul{
+	width: 760px;
+	height: 40px;
+	line-height: 40px;
+	float: right;
+}
+.main .center ul li{
+	float: left;
+	width: 190px;
+	text-align: center;
+}
+.main .center ul li a{
+	display: inline;
+	cursor: pointer;
+	font-weight: 600;
+}
+.main .center ul li a:hover{
+	text-decoration: underline;
+}
+
+/*内容部分CSS*/
+.main .content{
+	width: 960px;
+	margin: 10px auto;
+	padding-bottom: 20px;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+/*教师简介部分*/
+.main .content .panel{
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+	padding: 20px 0;
+	border-bottom: 1px solid #3399FF;
+}
+.main .content .panel .panel_title{
+	height: 60px;
+	line-height: 60px;
+	font-weight: bold;
+	color: #3399FF;
+	font-size: 16px;
+}
+.main .content .panel .panel_content{
+	text-indent: 28px;
+	font-size: 14px;
+	padding: 20px 0;
+}
+.table{
+	width: 798px;
+	margin: 20px auto;
+	text-align: center;
+	border: 1px solid #3399FF;
+}
+.table tr{
+	height: 30px;
+	line-height: 30px;
+}
+/*作业部分*/
+.text_box{
+	width: 100%;
+	margin-top: 20px;
+}
+.text_box .line_1{
+	height: 30px;
+	line-height: 30px;
+}
+.text_box .line_2{
+	height: 100px;
+	line-height: 30px;
+	margin-top: 20px;
+}
+.text_box label{
+	font-size: 16px;
+	display: block;
+	float: left;
+}
+.text_box .homework_title{
+	width: 200px;
+	height: 24px;
+	border-radius: 5px;
+	border: 2px solid #3399FF;
+	display: block;
+	float: left;
+}
+.text_box .homework_content{
+	width:300px;
+	height: 80px;
+	border-radius: 5px;
+	border: 2px solid #3399FF;
+	display: block;
+	float: left;
+}
+ul.homework_list{
+	margin-top: 20px;
+}
+ul.homework_list li{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dotted #999999;
+}
+ul.homework_list li a{
+	width: 500px;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	float: left;
+	color: #333333;
+}
+ul.homework_list li a:hover{
+	color: #3399FF;
+}
+ul.homework_list li span{
+	display: inline-block;
+	float: right;
+	font-size: 12px;
+	color: #999999;
+}
+/*资源部分*/
+.upload_box{
+	padding: 10px 0;
+}
+.upload_box span{
+	color: #FF0000;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	display: none;
+}
+.upload_button{
+	width: 230px;
+	height: 50px;
+	border: 1px solid #3399FF;
+	background-color: #3399FF;
+	border-radius: 5px;
+	position: relative;
+	float: left;
+	margin-top: 30px;
+}
+.upload_button label{
+	width: 230px;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 18px;
+}
+#file{
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.course_box{
+	width: 250px;
+	height: 60px;
+	float: left;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+.course_box .course_select{
+	width: 250px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px;
+	color: #FFFFFF;
+	background-color: #3399FF;
+	cursor: pointer;
+	position: relative;
+}
+.course_box .course_select ul{
+	width: 250px;
+	padding-top: 5px;
+	display: none;
+	position: absolute;
+	background-color: #3399FF;
+	top: 25px;
+	right: 0;
+	border-radius: 5px;
+	z-index: 999;
+}
+.course_box .course_select ul li{
+	height: 30px;
+	line-height: 30px;
+}
+.preview{
+	width: 600px;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.preview .file .name{
+	width: 220px;
+	height: 30px;
+	line-height: 30px;
+	fone-size: 12px;
+	float: left;
+}
+.preview .file .progress{
+	width: 200px;
+	height: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	float: left;
+	background-color: #CCCCCC;
+}
+.preview .file .progress .progressBar{
+	width: 0;
+	height: 10px;
+	background-color: #3399FF;
+	border-radius: 10px;
+	-webkit-animation: animate 1.5s linear 0s forwards;
+	-moz-animation: animate 1.5s linear 0s forwards;
+	animation: animate 1.5s linear 0s forwards;
+}
+.preview .file .done{
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-left: 20px;
+	text-align: center;
+	line-height: 30px;
+}
+.preview .file .done img{
+	-webkit-animation: finish 1s linear 2s both;
+	-moz-animation: finish 1s linear 2s both;
+	animation: finish 1s linear 2s both;
+}
+@-webkit-keyframes animate{
+	from{
+		width: 0;
+	}
+	to{
+		width: 200px;
+	}
+}
+@-moz-keyframes animate{
+	from{
+		width: 0;
+	}
+	to{
+		width: 200px;
+	}
+}
+@keyframes animate{
+	from{
+		width: 0;
+	}
+	to{
+		width: 200px;
+	}
+}
+@-webkit-keyframes finish{
+	0%{
+		-webkit-transform: scale(0);
+	}
+	50%{
+		-webkit-transform: scale(0.5);
+	}
+	100%{
+		-webkit-transform: scale(1);
+	}
+}
+@-moz-keyframes finish{
+	0%{
+		transform: scale(0);
+	}
+	50%{
+		transform: scale(0.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+@keyframes finish{
+	0%{
+		transform: scale(0);
+	}
+	50%{
+		transform: scale(0.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.upload_box .submit_button{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 5px;
+	border: none;
+	font-weight: bold;
+	margin: 20px 0;
+	color: #FFFFFF;
+	background-color: #50C602;
+	cursor: pointer;
+}
+.upload_box .sub_resourses{
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+ul.resource_list{
+	margin-top: 20px;
+}
+ul.resource_list li{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dotted #999999;
+}
+ul.resource_list li a{
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	float: left;
+	color: #333333;
+}
+ul.resource_list li a:hover{
+	color: #3399FF;
+}
+ul.resource_list li span{
+	display: inline-block;
+	float: right;
+	font-size: 12px;
+	color: #999999;
+}
+/*公告部分*/
+.sent_box{
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+.sent_box h4{
+	height: 30px;
+	line-height: 30px;
+}
+.sent_box span,
+.upload_box span{
+	color: #FF0000;
+	font-size: 12px;
+	height: 20px;
+	line-height: 20px;
+	display: none;
+	height: 30px;
+	line-height: 30px;
+}
+.sent_box .title_box,
+.upload_box .title_box{
+	width: 260px;
+	height: 50px;
+	float: left;
+}
+.sent_box .title_box .notice_title{
+	width: 250px;
+	height: 25px;
+	border: 2px solid #3399FF;
+	border-radius: 5px;
+	font-size: 16px;
+}
+.sent_box .content_box{
+	width: 800px;
+	height: 230px;
+	float: left;
+}
+.sent_box .content_box textarea{
+	width: 500px;
+	height: 200px;
+	border: 2px solid #3399FF;
+	border-radius: 5px;
+	font-size: 14px;
+	resize: none;
+}
+.sent_box .notice_submit{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	border: none;
+	border-radius: 5px;
+	background-color: #3399FF;
+	color: #FFFFFF;
+	cursor: pointer;
+	margin-top: 20px;
+	display: block;
+	float: left;
+}
+ul.notice_list{
+	margin-top: 20px;
+}
+ul.notice_list li{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dotted #999999;
+}
+ul.notice_list li a{
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	float: left;
+	color: #333333;
+}
+ul.notice_list li a:hover{
+	color: #3399FF;
+}
+ul.notice_list li span{
+	display: inline-block;
+	float: right;
+	font-size: 12px;
+	color: #999999;
+}

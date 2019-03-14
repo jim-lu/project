@@ -1,0 +1,143 @@
+@CHARSET "UTF-8";
+
+.main{
+	width: 100%;
+	min-width: 960px;
+	padding-top: 50px;
+}
+.main .first_row_box{
+	width: 100%;
+	min-width: 960px;
+	background-color: #E8906A;
+	background-image: url(../img/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: 500px 20px;
+	min-height: 384px;
+}
+.main .first_row_box .first_row{
+	width: 900px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.main .first_row_box .first_row h2, 
+.main .second_row_box .second_row h2{
+	font-size: 18px;
+	text-indent: 10px;
+	display: block;
+	float: left;
+	width: 400px;
+	height: 24px;
+	line-height: 24px;
+	margin: 10px 0;
+	border-left: 3px solid #3399FF;
+}
+.main .first_row_box .first_row .more, 
+.main .second_row_box .second_row .more{
+	float: right;
+	font-size: 12px;
+	color: #3399FF;
+	height: 24px;
+	line-height: 24px;
+	margin-right: 10px;
+	margin: 10px 10px 10px 0;
+	cursor: pointer;
+}
+.main .first_row_box .first_row .more span, 
+.main .second_row_box .second_row .more span{
+	margin: 0 1px;
+}
+.main .first_row_box .first_row ul li{
+	float: left;
+	display: block;
+	width: 158px;
+	height: 158px;
+	margin: 10px;
+	border: 1px solid #CCCCCC;
+	box-shadow: 2px 2px 5px #CCCCCC;
+	-moz-box-shadow: 2px 2px 5px #CCCCCC;
+	-webkit-box-shadow: 2px 2px 5px #CCCCCC;
+}
+.main .first_row_box .first_row ul li a{
+	width: 158px;
+	height: 158px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	line-height: 158px;
+	text-align: center;
+}
+.main .first_row_box .first_row ul li a img{
+	width: 158px;
+	height: 158px;
+}
+.main .first_row_box .first_row ul li a .filter{
+	width: 158px;
+	height: 158px;
+	position: absolute;
+	top: 118px;
+	left: 0;
+	background-color: #1177DD;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	z-index: 2;
+}
+.main .first_row_box .first_row ul li a .filter p{
+	width: 138px;
+	font-size: 18px;
+	margin: 10px;
+	line-height: 30px;
+	color: #FFFFFF;
+}
+.main .first_row_box .first_row ul li a .filter span{
+	display: block;
+	width: 138px;
+	height: 20px;
+	line-height: 20px;
+	margin: 10px;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+.main .second_row_box{
+	width: 100%;
+	min-width: 960px;
+	background-color: #E6EFEF;
+	min-height: 384px;
+}
+.main .second_row_box .second_row{
+	width: 900px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.main .second_row_box .second_row ul li{
+	float: left;
+	display: block;
+	width: 280px;
+	height: 120px;
+	margin: 10px;
+}
+.main .second_row_box .second_row ul li a:hover{
+	cursor: pointer;
+	color: #3399FF;
+}
+.main .second_row_box .second_row .teacher_pic{
+	width: 90px;
+	height: 90px;
+	border-radius: 90px;
+	border: 1px solid #CCCCCC;
+	float: left;
+	margin: 10px 10px;
+	padding: 5px;
+	background-color: #FFFFFF;
+}
+.main .second_row_box .second_row .teacher_pic img{
+	width: 90px;
+	height: 90px;
+	border-radius: 90px;
+}
+.main .second_row_box .second_row .teacher_name{
+	width: 100px;
+	height: 120px;
+	line-height: 120px;
+	float: left;
+	text-indent: 20px;
+}

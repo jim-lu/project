@@ -1,0 +1,190 @@
+@CHARSET "UTF-8";
+
+.main{
+	width: 100%;
+	min-width: 960px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: #CCCCCC;
+	background-image: url(../img/bg.jpg);
+}
+.center{
+	width: 960px;
+	margin: 20px auto;
+	background-color: #FFFFFF;
+}
+.center .top{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #77DDFF;
+	position: relative;
+}
+.center .top h2{
+	display: block;
+	width: 200px;
+	height: 40px;
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+	color: #FFFFFF;
+	background-color: #3399FF;
+	font-size: 18px;
+	text-align: center;
+}
+.center .top a{
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+	color: #333333;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.center .top a:hover{
+	font-weight: bold;
+}
+.center .profile{
+	width: 100%;
+	padding: 10px 0;
+}
+.center .profile .upload_box{
+	padding: 20px;
+	margin-left: 100px;
+}
+.center .profile .upload_box .preview_box{
+	width: 100px;
+	height: 100px;
+	border: 1px solid #3399FF;
+	float: left;
+}
+.center .profile .upload_box .preview_box img{
+	width: 100px;
+	height: 100px;
+}
+.center .profile .upload_box .button_box{
+	margin-left: 20px;
+	float: left;
+	position: relative;
+}
+.center .profile .upload_box .button_box label{
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	background-color: #3399FF;
+	color: #FFFFFF;
+	text-align: center;
+	display: inline-block;
+	margin-top: 20px;
+	border-radius: 5px;
+}
+.center .profile .upload_box .button_box .avatar{
+	position: absolute;
+	width: 150px;
+	height: 30px;
+	top: 30px;
+	left: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.center .profile .user_info{
+	margin: 20px 0 0 20px;
+}
+.center .profile .user_info label{
+	width: 100px;
+	text-align: right;
+	float: left;
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+}
+.center .profile .user_info input{
+	width: 200px;
+	height: 24px;
+	font-size: 16px;
+	margin-top: 14px;
+	float: left;
+	display: inline-block;
+	border: 1px solid #3399FF;
+	border-radius: 5px;
+}
+.center .profile .user_info textarea{
+	width: 500px;
+	height: 200px;
+	margin-top: 15px;
+	float: left;
+	border: 1px solid #3399FF;
+	border-radius: 5px;
+}
+.center .profile .user_info span{
+	display: inline-block;
+	float: left;
+	margin-top: 190px;
+	margin-left: 20px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	color: #999999;
+}
+.center .profile .user_info b{
+	font-size: 12px;
+	color: #FF0000;
+	display: inline-block;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	margin-left: 10px;
+	display: none; 
+}
+#submit_button{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #3399FF;
+	border-radius: 5px;
+	border: none;
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: bold;
+	margin: 20px auto;
+	display: block;
+	cursor: pointer;
+}
+.course_box{
+	padding: 20px;
+	border-top: 1px solid #CCCCCC;
+}
+#addCourse{
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	background-color: #3399FF;
+	color: #FFFFFF;
+	text-align: center;
+	display: inline-block;
+	border-radius: 5px;
+}
+.course_box .panel{
+	width: 800px;
+	height: auto;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.course_box .panel .panel_title{
+	height: 60px;
+	line-height: 60px;
+	font-weight: bold;
+	color: #3399FF;
+	font-size: 16px;
+}
+.table{
+	width: 798px;
+	margin: 20px auto;
+	text-align: center;
+	border: 1px solid #3399FF;
+}
+.table tr{
+	height: 30px;
+	line-height: 30px;
+}
