@@ -1,0 +1,36 @@
+{include file='view/common/head_for_log.html'}
+<link href="public/css/register.css?v=1.2" rel="stylesheet" type="text/css" />
+<div class="register_box">
+	<h2>注册新账号</h2>
+	<form class="reg">
+		<div class="choose_box">
+			<input type="radio" class="choose" id="student" name="type" value="student" checked="checked" /> <label for="student">学生</label>
+			<input type="radio" class="choose" id="teacher" name="type" value="teacher" /> <label for="teacher">教师</label>
+		</div>
+		<div class="register_input_box student_num">
+			<span>学号</span>
+			<input type="text" placeholder="请输入学号" id="num" />
+		</div>
+		<p class="num"></p>
+		<div class="register_input_box">
+			<span>姓名</span>
+			<input type="text" placeholder="请输入姓名" id="username" />
+		</div>
+		<p class="username"></p>
+		<div class="register_input_box">
+			<span>密码</span>
+			<input type="password" placeholder="请输入6-15位数字和字母" id="pwd" />
+		</div>
+		<p class="pwd"></p>
+		<div class="register_input_box">
+			<span>校验</span>
+			<input type="password" placeholder="再次输入密码" id="confirm_pwd" />
+		</div>
+		<p class="confirm"></p>
+		<input type="submit" value="注册" />
+		<a href="?control=login" class="to_log">已有账号，去登录</a>
+	</form>
+	<div class="alert_box">注册成功<img src="public/img/finish.png" /></div>
+</div>
+<script type="text/javascript" src="./public/js/register.js?v=1.1"></script>
+{include file='view/common/foot.html'}

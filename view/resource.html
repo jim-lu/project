@@ -1,0 +1,13 @@
+{if $result}
+{foreach from=$result item=i}
+<li style="display: none;">
+	<a href="?control=course&action=resourceDetail&time={$i.resource_time}">{$i.resource_first}——{$i.resource_course}</a>
+	<span>发布时间：{$i.resource_time|date_format:"%Y-%m-%d"}</span>
+</li>
+{/foreach}
+{else}
+<li style="display: none;">
+	<a href="?control=course&action=resourceDetail&time={$item.time}">{$item.title}——{$item.course}</a>
+	<span>发布时间：{$item.time|date_format:"%Y-%m-%d"}</span>
+</li>
+{/if}

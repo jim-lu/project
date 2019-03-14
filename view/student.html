@@ -1,0 +1,29 @@
+{include file='view/common/head_for_index.html'}
+<link href="public/css/student.css?v=1.1" rel="stylesheet" type="text/css" />
+<div class="main">
+	<div class="center clearfix">
+		<div class="head_img">
+			{if $student.student_image eq null || $student.student_image eq ''}
+			<img src="public/img/default.png" />
+			{else}
+			<img src="{$student.student_image}" />
+			{/if}
+		</div>
+		<div class="student_info">
+			<p class="student_name">{$student.student_name}</p>
+		</div>
+		<img alt="" src="public/img/gdufs.png" class="gdufs" />
+		<ul class="menu">
+			<li><a id="about">个人简介 About</a></li>
+			<li><a id="homework">课程作业 Homework</a></li>
+			<li><a id="resources">课程资源 Resources</a></li>
+			<li><a id="notices">课程公告 Notices</a></li>
+		</ul>
+		<input type="hidden" class="student_content" value="about" />
+	</div>
+	<div class="content">
+		
+	</div>
+</div>
+<script type="text/javascript" src="./public/js/student.js?v=1.0"></script>
+{include file='view/common/foot.html'}

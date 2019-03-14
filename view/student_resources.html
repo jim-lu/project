@@ -1,0 +1,15 @@
+<div class="panel">
+	<h3>课程资源</h3>
+	<ul class="homework_list">
+		{foreach from=$resource item=i}
+		{if $i neq false}
+		<li>
+			<a href="?control=course&action=resourceDetail&time={$i.resource_time}">
+				{$i.resource_first}——{$i.resource_course}
+			</a>
+			<span>发布时间：{$i.resource_time|date_format:"%Y-%m-%d"}</span>
+		</li>
+		{/if}
+		{/foreach}
+	</ul>
+</div>

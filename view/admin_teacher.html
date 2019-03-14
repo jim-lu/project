@@ -1,0 +1,18 @@
+<table class="teacher_table">
+	<tr>
+		<th>教师头像</th>
+		<th>教师名称</th>
+	</tr>
+	{foreach from=$teachers item=i}
+	<tr>
+		<td>
+			{if $i.teacher_image eq null || $i.teacher_image eq ''}
+			<img src="public/img/default.png" />
+			{else}
+			<img src="{$i.teacher_image}" />
+			{/if}
+		</td>
+		<td>{$i.teacher_name}</td>
+	</tr>
+	{/foreach}
+</table>

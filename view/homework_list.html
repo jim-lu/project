@@ -1,0 +1,75 @@
+<h4>作业列表</h4>
+<table border="1" style="border-color: #3399FF;">
+	{if $student}
+	<tr>
+		<th>作业</th>
+		<th>提交人</th>
+		<th>同学互评</th>
+		<th>提交</th>
+	</tr>
+	{foreach from=$list item=i}
+	<tr>
+		<td>
+			<i class="fa fa-download" aria-hidden="true" title="下载"></i>
+			<a href="{$i.homework_doc}" download="{$i.filename}">
+				{$homework.homework_title}
+			</a>
+		</td>
+		<td>
+			{$i.student.student_name}
+		</td>
+		<td class="score">
+			{if $i.score}
+				{$i.score[0]}分
+			{else}
+			<input type="text" class="stu_score" placeholder="满分100" size="10" /> 分
+			{/if}
+			<input type="hidden" class="stu_id" value="{$i.student.id}" />
+		</td>
+		<td>
+			{if $i.score}
+			<input type="submit" class="stu_submit" value="确定" disabled="disabled" style="opacity: 0.5; filter: alpha(opacity=50);" />
+			{else}
+			<input type="submit" class="stu_submit" value="确定" />
+			{/if}
+			<input type="hidden" class="stu_id" value="{$i.student.id}" />
+		</td>
+	</tr>
+	{/foreach}
+	{else}
+	<tr>
+		<th>作业</th>
+		<th>提交人</th>
+		<th>教师评分</th>
+		<th>提交</th>
+		<th>查看评分</th>
+	</tr>
+	{foreach from=$list item=i}
+	<tr>
+		<td>
+			<i class="fa fa-download" aria-hidden="true" title="下载"></i>
+			<a href="{$i.homework_doc}" download="{$i.filename}">
+				{$homework.homework_title}
+			</a>
+		</td>
+		<td>
+			{$i.student.student_name}
+		</td>
+		<td>
+			{if $i.homework_grade_teacher > 0}
+			<input type="text" class="stu_score" placeholder="满分100" size="10" value="{$i.homework_grade_teacher}" /> 分
+			{else}
+			<input type="text" class="stu_score" placeholder="满分100" size="10" /> 分
+			{/if}
+		</td>
+		<td>
+			<input type="submit" class="teacher_submit" value="确定" />
+			<input type="hidden" class="stu_id" value="{$i.student.id}" />
+		</td>
+		<td>
+			<a class="check_score" href="?control=teacher&action=scorePage&stu_id={$i.student.id}&homework_id={$i.homework_id}&sender={$homework.homework_sender}">查看评分</a>
+		</td>
+	</tr>
+	{/foreach}
+	{/if}
+</table>

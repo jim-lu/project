@@ -1,0 +1,131 @@
+{include file='view/common/head_for_index.html'}
+<link href="public/css/addCourse.css?v=1.0" rel="stylesheet" type="text/css" />
+<link href="public/css/froala_editor.min.css" rel="stylesheet" type="text/css">
+<div class="main">
+	<div class="center">
+		<a class="back" href="javascript:history.back(-1)"><i class="fa fa-hand-o-left"></i> 返回</a>
+		<h2>添加课程</h2>
+		<form id="add">
+			<div class="line line_1 clearfix">
+				<label for="course_name">课程名称：</label>
+				<input id="course_name" type="text" />
+				<b class="warn">请输入课程名称</b>
+			</div>
+			<div class="line line_2 clearfix">
+				<label>课程图片：</label>
+				<div class="square">选择图片</div>
+				<input id="course_img" type="file" />
+			</div>
+			<div class="line line_3">
+				<label for="course_teacher">课程教师：</label>
+				<a class="mask">
+					<select id="course_teacher">
+						{if $list}
+							{foreach from=$list item=i}
+							<option name={$i.id}>{$i.teacher_name}</option>
+							{/foreach}
+						{/if}
+					</select>
+				</a>
+				<b class="warn">不能为其他教师添加课程</b>
+			</div>
+			<div class="line line_7">
+				<label for="course_term">所在学期：</label>
+				<a class="mask">
+					<select id="course_term">
+						{if $terms}
+							{foreach from=$terms item=i}
+								<option>{$i.term}</option>
+							{/foreach}
+						{/if}
+					</select>
+				</a>
+			</div>
+			<div class="line line_8">
+				<label for="course_term">上课时间：</label>
+				<b class="warn">请选择上课时间</b>
+				<table border="1" cellpadding="0" cellspacing="0">
+					<tr>
+						<th>周一</th>
+						<th>周二</th>
+						<th>周三</th>
+						<th>周四</th>
+						<th>周五</th>
+						<th>周六</th>
+						<th>周日</th>
+					</tr>
+					<tr>
+						{for $i = 1 to 7}
+						<td name={$i}>1-2节</td>
+						{/for}
+					</tr>
+					<tr>
+						{for $i = 1 to 7}
+						<td name={$i}>3-5节</td>
+						{/for}
+					</tr>
+					<tr>
+						{for $i = 1 to 7}
+						<td name={$i}>6-7节</td>
+						{/for}
+					</tr>
+					<tr>
+						{for $i = 1 to 7}
+						<td name={$i}>8-9节</td>
+						{/for}
+					</tr>
+					<tr>
+						{for $i = 1 to 7}
+						<td name={$i}>10-11节</td>
+						{/for}
+					</tr>
+					<tr>
+						{for $i = 1 to 7}
+						<td name={$i}>12-13节</td>
+						{/for}
+					</tr>
+					<tr>
+						{for $i = 1 to 7}
+						<td name={$i}>14-15节</td>
+						{/for}
+					</tr>
+				</table>
+				<input type="hidden" id="course_time" value="" />
+			</div>
+			<div class="line line_4">
+				<label>课程简介：</label>
+				<section id="editor_1">
+				    <div id="edit_1">   
+				    </div>
+				</section>
+			</div>
+			<div class="line line_5">
+				<label>课程大纲：</label>
+				<section id="editor_2">
+					<div id="edit_2">
+					</div>
+				</section>
+			</div>
+			<div class="line line_6">
+				<input id="submit" type="submit" value="点击添加课程" />
+			</div>
+		</form>
+	</div>
+	<div class="alert_box"></div>
+</div>
+<script type="text/javascript" src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="public/js/froala_editor.min.js"></script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="public/js/froala_editor_ie8.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="public/js/plugins/tables.min.js"></script>
+<script type="text/javascript" src="public/js/plugins/lists.min.js"></script>
+<script type="text/javascript" src="public/js/plugins/colors.min.js"></script>
+<script type="text/javascript" src="public/js/plugins/media_manager.min.js"></script>
+<script type="text/javascript" src="public/js/plugins/font_family.min.js"></script>
+<script type="text/javascript" src="public/js/plugins/font_size.min.js"></script>
+<script type="text/javascript" src="public/js/plugins/block_styles.min.js"></script>
+<script type="text/javascript" src="public/js/plugins/video.min.js"></script>
+<script type="text/javascript" src="public/js/plugins/file_upload.min.js?v=1.0"></script>
+<script type="text/javascript" src="public/js/addCourse.js?v=1.0"></script>
+{include file='view/common/foot.html'}

@@ -1,0 +1,8 @@
+{if $notices}
+	{foreach from=$notices item=i}
+	<li>
+		<a href="?control=course&action=noticeDetail&time={$i.notice_time}">{$i.notice_title}</a>
+		<p>发布时间：{$i.notice_time|date_format:"%Y-%m-%d"}</p>
+	</li>
+	{/foreach}
+{/if}

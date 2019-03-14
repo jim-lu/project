@@ -1,0 +1,55 @@
+<div class="panel">
+	<h3 style="display: none;">发布作业</h3>
+	<div class="upload_box" style="display: none;">
+		<form class="dropzone clearfix" id="sent_homework">
+			<div class="text_box">
+				<div class="line_1 clearfix">
+					<label for="title">题目：</label>
+					<input type="text" class="homework_title" id="title" />
+					<span>请写入标题</span>
+				</div>
+				<div class="line_2 clearfix">
+					<label for="content">描述：</label>
+					<textarea rows="" cols="" class="homework_content" id="content"></textarea>
+				</div>
+			</div>
+			<div class="upload_button dz-clickable">
+				<label for="file">上传作业文档</label>
+				<input type="file" id="file" multiple="multiple" />
+			</div>
+			<div class="course_box">
+				<div class="course_select">
+					<h4>请选择课程&nbsp;<i class="fa fa-caret-down"></i></h4>
+					<ul class="course_select_list">
+						{if $courses}
+						{foreach from=$courses item=i}
+						<li name="{$i.id}">{$i.course_name} {$i.course_time}</li>
+						{/foreach}
+						{/if}
+					</ul>
+					<input type="hidden" class="course_id" />
+					<input type="hidden" class="course_selected" />
+				</div>
+				<span>请选择课程</span>
+			</div>
+			<div class="preview">
+				<!-- template -->
+			</div>
+			<input type="submit" value="点击发布" class="submit_button" />
+		</form>
+	</div>
+	<h3>已发布作业</h3>
+	<ul class="homework_list">
+		{if $homeworks}
+		{foreach from=$homeworks item=i}
+		<li>
+			<a href="?control=course&action=homeworkDetail&time={$i.homework_time}">
+				{$i.homework_title}——{$i.homework_course}
+			</a>
+			<span>发布时间：{$i.homework_time|date_format:"%Y-%m-%d"}</span>
+		</li>
+		{/foreach}
+		{/if}
+	</ul>
+	<div id="page-mark" data-page="1"></div>
+</div>

@@ -1,0 +1,8 @@
+{if $resources}
+{foreach from=$resources item=i}
+	<li>
+		<a href="?control=course&action=resourceDetail&time={$i.resource_time}">{$i.resource_first}</a>
+		<p>发布时间：{$i.resource_time|date_format:"%Y-%m-%d"}</p>
+	</li>
+{/foreach}
+{/if}

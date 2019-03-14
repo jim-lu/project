@@ -1,0 +1,27 @@
+<div class="panel">
+	<div class="panel_title">个人简介</div>
+	<div class="panel_content">
+	{if $teacher.teacher_info eq null || $teacher.teacher_info eq ''}
+	暂无
+	{else}
+	{$teacher.teacher_info}
+	{/if}
+	</div>
+</div>
+<div class="panel">
+	<div class="panel_title">所在课程</div>
+	<table class="table" border="1">
+		<tr>
+			<th>课程</th>
+			<th>时间</th>
+		</tr>
+		{if $courses}
+		{foreach from=$courses item=i}
+		<tr>
+			<td>{$i.course_name}</td>
+			<td>{$i.course_time}</td>
+		</tr>
+		{/foreach}
+		{/if}
+	</table>
+</div>

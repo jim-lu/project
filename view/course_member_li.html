@@ -1,0 +1,16 @@
+{if $student_list}
+{foreach from=$student_list item=i}
+<li>
+	<a href="?control=student&id={$i.course_member_id}">
+		<div class="pic">
+			{if $i.student_img eq null}
+			<img alt="" src="public/img/default.png" />
+			{else}
+			<img alt="" src="{$i.student_img}" />
+			{/if}
+		</div>
+		<div class="name">{$i.course_member_name}</div>
+	</a>
+</li>
+{/foreach}
+{/if}

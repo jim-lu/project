@@ -1,0 +1,21 @@
+{if $total / $per gt 1 and $total / $per lt 11}
+	{for $i = 1 to $total / $per}
+	<li>{$i}</li>
+	{/for}
+{else if $total / $per >= 11}
+	{if $cur_ten gt 1}
+	<li class="prev">&lt;</li>
+	{/if}
+	{if $cur_ten * 10 lt $total}
+		{for $i = 1 to 10}
+		<li>{$i + 10 * ($cur_ten - 1)}</li>
+		{/for}
+	{else}
+		{for $i = 1 to $total % 10}
+		<li>{$i + 10 * ($cur_ten - 1)}</li>
+		{/for}
+	{/if}
+	{if $cur_ten * 10 lt $total}
+	<li class="next">&gt;</li>
+	{/if}
+{/if}

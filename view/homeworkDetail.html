@@ -1,0 +1,58 @@
+{include file='view/common/head_for_index.html'}
+<link href="public/css/detail.css?v=1.1" rel="stylesheet" type="text/css" />
+<div class="main">
+	<div class="center">
+		<div class="top clearfix">
+			<div class="left">
+				<h2>{$homework.homework_title}</h2>
+				<div class="post_title">
+					发布时间：{$homework.homework_time|date_format:"%Y-%m-%d"}
+				</div>
+			</div>
+			<div class="right">
+				<a href="?control=course&id={$homework.course.id}">
+					{if $homework.course.course_img eq null || $homework.course.course_img eq ''}
+					<img alt="" src="public/img/course_default.png">
+					{else}
+					<img src="{$homework.course.course_img}">
+					{/if}
+					<h3>{$homework.homework_course}</h3>
+				</a>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="detail">
+				{$homework.homework_content}
+			</div>
+			<ul class="doc">
+				{if $homework.files|@count neq 0}
+				{for $i=0 to $homework.files|@count - 1}
+				<li>
+					<i class="fa fa-download" aria-hidden="true" title="下载"></i>
+					<a href="{$homework.files[$i]}" download="{$homework.filenames[$i]}">
+						{$homework.filenames[$i]}
+					</a>
+				</li>
+				{/for}
+				{/if}
+			</ul>
+			<div class="upload_box">
+				<h4>提交作业</h4>
+				<form id="upload_homework">
+					<div class="upload_button">
+						<label for="file">浏览</label>
+						<input type="file" id="file" />
+					</div>
+					<div class="preview"></div>
+					<input type="hidden" id="homework_id" value="{$homework.id}" />
+					<input type="submit" value="提交" class="submit_button" disabled="disabled" /> 
+				</form>
+			</div>
+			<div class="homework_list">
+			</div>
+		</div>
+	</div>
+	<div class="alert_box"></div>
+</div>
+<script type="text/javascript" src="./public/js/detail.js?v=1.0"></script>
+{include file='view/common/foot.html'}

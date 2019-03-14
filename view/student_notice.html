@@ -1,0 +1,22 @@
+<div class="panel">
+	<h3>课程公告</h3>
+	<ul class="homework_list">
+		{foreach from=$notice item=i}
+		{if $i neq false}
+		<li>
+			<a href="?control=course&action=noticeDetail&time={$i.notice_time}">
+				{$i.notice_title}——{$i.notice_course}
+			</a>
+			<span>发布时间：{$i.notice_time|date_format:"%Y-%m-%d"}</span>
+		</li>
+		{/if}
+		{/foreach}
+	</ul>
+	<ul class="page clearfix">
+		{if $total}
+			{for $i = 1 to $total / 10}
+			<li>{$i}</li>
+			{/for}
+		{/if}
+	</ul>
+</div>

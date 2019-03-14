@@ -1,0 +1,41 @@
+{if $course_list}
+{foreach from=$course_list item=i}
+<li class="clearfix">
+	<a href="index.php?control=course&id={$i.id}">
+		<div class="course_img">
+			{if $i.course_img eq null || $i.course_img eq ''}
+			<img src="public/img/course_default.png" />
+			{else}
+			<img src="{$i.course_img}" />
+			{/if}
+		</div>
+		<div class="course_info">
+			<p>课程名称：{$i.course_name}</p>
+			<p>教师：{$i.course_teacher}</p>
+			<p>上课时间：{$i.course_time}</p>
+			<div class="limit">简介：{$i.course_intro}</div>
+		</div>
+	</a>
+</li>
+{/foreach}
+{/if}
+<script type="text/javascript">
+$(function() {
+	function limit(str) {
+		if(str.length > 10) {
+			str = str.substring(0, 10) + "...";
+		}
+		return str;
+	}
+	
+	function htmlFilter(html) {
+		var _replace = html.replace(/<\/?.+?>/g,"");
+		var text = _replace.replace(/ /g,"");
+		return text;
+	}
+	
+	for(var i = 0; i < $(".limit").length; i ++) {
+		$(".limit").text(limit(htmlFilter($(".limit").eq(i).html())));
+	}
+})
+</script>

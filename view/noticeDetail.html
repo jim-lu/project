@@ -1,0 +1,30 @@
+{include file='view/common/head_for_index.html'}
+<link href="public/css/detail.css?v=1.0" rel="stylesheet" type="text/css" />
+<div class="main">
+	<div class="center">
+		<div class="top clearfix">
+			<div class="left">
+				<h2>{$notice.notice_title}</h2>
+				<div class="post_title">
+					发布时间：{$notice.notice_time|date_format:"%Y-%m-%d"}
+				</div>
+			</div>
+			<div class="right">
+				<a href="?control=course&id={$notice.course.id}">
+					{if $notice.course.course_img eq null || $notice.course.course_img eq ''}
+					<img alt="" src="public/img/course_default.png">
+					{else}
+					<img src="{$notice.course.course_img}">
+					{/if}
+					<h3>{$notice.notice_course}</h3>
+				</a>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="detail">
+				{$notice.notice_content}
+			</div>
+		</div>
+	</div>
+</div>
+{include file='view/common/foot.html'}

@@ -1,0 +1,94 @@
+<div class="left_container">
+	<div class="left_container_main">
+		<div class="section_title cata_1">
+			<b>简介</b>
+			<span>Brief Introduction</span>
+		</div>
+		<div class="section_content info">
+			{$course.course_intro}
+		</div>
+	</div>
+	<div class="left_container_main">
+		<div class="section_title cata_2">
+			<b>教学大纲</b>
+			<span>Teaching Syllabus</span>
+		</div>
+		<div class="section_content info">
+			{$course.course_syllabus}
+		</div>
+	</div>
+	<div class="left_container_main">
+		<div class="section_title cata_3">
+			<b>留言板</b>
+			<span>Message Board</span>
+		</div>
+		<div class="section_content">
+			<form id="sent_comment" class="clearfix">
+				<textarea id="comment_text" rows="" cols=""></textarea>
+				<p>共 <i>0</i> 条留言</p>
+				<input type="submit" value="发表" />
+			</form>
+			<h3>留言</h3>
+			<ul class="comment">
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="right_container">
+	<div class="right_container_main">
+		<div class="section_title cata_4">
+			<b>教师</b>
+			<span>Teacher</span>
+		</div>
+		<div class="section_content">
+			<div class="teacher clearfix">
+				<a href="?control=teacher&id={$teacher.id}">
+					<div class="teacher_pic">
+						{if $teacher.teacher_image eq null || $teacher.teacher_image eq ''}
+						<img src="public/img/default.png" />
+						{else}
+						<img src="{$teacher.teacher_image}" />
+						{/if}
+					</div>
+					<div class="teacher_name">{$course.course_teacher}</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="right_container_main">
+		<div class="section_title cata_5">
+			<b>教学公告</b>
+			<span>Notices</span>
+		</div>
+		<div class="section_content">
+			<ul class="lists">
+				{if $notice}
+				{foreach from=$notice item=i}
+				<li class="clearfix">
+					<a href="?control=course&action=noticeDetail&time={$i.notice_time}">{$i.notice_title}</a>
+					<span>{$i.notice_time|date_format:"%Y-%m-%d"}</span>
+				</li>
+				{/foreach}
+				{/if}
+			</ul>
+		</div>
+	</div>
+	<div class="right_container_main">
+		<div class="section_title cata_6">
+			<b>教学资源</b>
+			<span>Resources</span>
+		</div>
+		<div class="section_content">
+			<ul class="lists">
+				{if $resource}
+				{foreach from=$resource item=i}
+				<li class="clearfix">
+					<a href="?control=course&action=resourceDetail&time={$i.resource_time}">{$i.resource_first}</a>
+					<span>{$i.resource_time|date_format:"%Y-%m-%d"}</span>
+				</li>
+				{/foreach}
+				{/if}
+			</ul>
+		</div>
+	</div>
+</div>

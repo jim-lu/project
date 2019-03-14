@@ -1,0 +1,31 @@
+<div class="member_container">
+	<div class="teacher_container">
+		<h3>教师</h3>
+		<div class="teacher clearfix">
+			<a>
+				<div class="pic">
+					{if $teacher.teacher_image eq null || $teacher.teacher_image eq ''}
+					<img src="public/img/default.png" />
+					{else}
+					<img src="{$teacher.teacher_image}" />
+					{/if}
+				</div>
+				<div class="name">{$course.course_teacher}</div>
+				<div class="title">主讲</div>
+			</a>
+		</div>
+	</div>
+	<div class="student_container">
+		<h3>学生</h3>
+		<ul class="student_list clearfix">
+			
+		</ul>
+		<ul class="page clearfix">
+			{if $total}
+				{for $i = 1 to $total / 14}
+				<li>{$i}</li>
+				{/for}
+			{/if}
+		</ul>
+	</div>
+</div>

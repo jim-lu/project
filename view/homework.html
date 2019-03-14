@@ -1,0 +1,15 @@
+{if $result}
+{foreach from=$result item=i}
+<li style="display: none;">
+	<a href="?control=course&action=homeworkDetail&time={$i.homework_time}">{$i.homework_title}——{$i.homework_course}</a>
+	<span>发布时间：{$i.homework_time|date_format:"%Y-%m-%d"}</span>
+</li>
+{/foreach}
+{else}
+<li style="display: none;">
+	<a href="?control=course&action=homeworkDetail&time={$item.time}">
+		{$item.title}——{$item.course}
+	</a>
+	<span>发布时间：{$item.time|date_format:"%Y-%m-%d"}</span>
+</li>
+{/if}

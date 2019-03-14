@@ -1,0 +1,20 @@
+{foreach from=$comment item=i}
+<li class="comment_list clearfix">
+	<a class="head_img">
+		{if $i.personal[3] eq null || $i.personal[3] eq ''}
+		<img src="public/img/default.png" />
+		{else}
+		<img src="{$i.personal[3]}" />
+		{/if}
+	</a>
+	<span class="name_box">
+		{if $i.type eq 'teacher'}
+		<a href="?control=teacher&id={$i.personal[0]}" class="name">{$i.personal[1]}</a>
+		{else}
+		<a href="?control=student&id={$i.personal[0]}" class="name">{$i.personal[1]}</a>
+		{/if}
+	</span>
+	<div class="comment_content">{$i.comment_content}</div>
+	<div class="date">{$i.comment_time|date_format:"%Y-%m-%d"}</div>
+</li>
+{/foreach}

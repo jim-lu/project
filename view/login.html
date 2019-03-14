@@ -1,0 +1,30 @@
+{include file='view/common/head_for_log.html'}
+<link href="public/css/login.css?v=1.2" rel="stylesheet" type="text/css" />
+<div class="main_body">
+	<div class="main_login clearfix">
+    	<img class="login_banner" src="public/img/login_banner.png" />
+    	<div class="login_box">
+        	<div class="login_title">
+            	<h2>登录<img src="public/img/login_corner.png" /></h2>
+            </div>
+            <form class="log">
+            	<div class="choose_box">
+					<input type="radio" class="choose" id="student" name="type" value="student" checked="checked" /> <label for="student">学生</label>
+					<input type="radio" class="choose" id="teacher" name="type" value="teacher" /> <label for="teacher">教师</label>
+				</div>
+            	<p class="student_num">学号：<input type="text" name="num" placeholder="请输入学号" id="num" /></p>
+                <b class="num"></b>
+                <p class="teacher_name" style="display: none;">姓名：<input type="text" name="user" placeholder="请输入姓名" id="user" /></p>
+                <b class="user" style="display: none"></b>
+                <p>密码：<input type="password" name="pwd" placeholder="请输入密码" id="pwd" /></p>
+                <b class="pwd"></b>
+                <input type="submit" name="login" value="登录" />
+            </form>
+            <a href="index.php?control=register" class="to_reg">去注册</a>
+            <!-- <a href="index.php?control=login&action=getPwd" class="to_pwd">忘记密码</a> -->
+        </div>
+    </div>
+    <div class="alert_box"></div>
+</div>
+<script type="text/javascript" src="./public/js/login.js?v=1.3"></script>
+{include file='view/common/foot.html'}

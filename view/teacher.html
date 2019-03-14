@@ -1,0 +1,30 @@
+{include file='view/common/head_for_index.html'}
+<link href="public/css/teacher.css?v=1.1" rel="stylesheet" type="text/css" />
+<div class="main">
+	<div class="center clearfix">
+		<div class="head_img">
+			{if $teacher.teacher_image eq null || $teacher.teacher_image eq ''}
+			<img src="public/img/default.png" />
+			{else}
+			<img src="{$teacher.teacher_image}" />
+			{/if}
+		</div>
+		<div class="teacher_info">
+			<p class="teacher_name">{$teacher.teacher_name}</p>
+		</div>
+		<img alt="" src="public/img/gdufs.png" class="gdufs" />
+		<ul class="menu">
+			<li><a id="about">简介 About</a></li>
+			<li><a id="homework">作业 Homework</a></li>
+			<li><a id="resources">资源 Resources</a></li>
+			<li><a id="notices">公告 Notices</a></li>
+		</ul>
+		<input type="hidden" class="teacher_content" value="about" />
+	</div>
+	<div class="content">
+		
+	</div>
+	<div class="alert_box"></div>
+</div>
+<script type="text/javascript" src="./public/js/teacher.js?v=1.0"></script>
+{include file='view/common/foot.html'}

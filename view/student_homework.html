@@ -1,0 +1,20 @@
+<div class="panel">
+	<h3>作业</h3>
+	<ul class="homework_list">
+		{foreach from=$homework item=i}
+		{if $i neq false}
+		<li>
+			<a href="?control=course&action=homeworkDetail&time={$i.homework_time}">
+				{$i.homework_title}——{$i.homework_course}
+			</a>
+			<span>发布时间：{$i.homework_time|date_format:"%Y-%m-%d"}</span>
+			{if $i.progress[0] eq 1}
+			<i>已完成</i>
+			{else}
+			<i class="active">未完成</i>
+			{/if}
+		</li>
+		{/if}
+		{/foreach}
+	</ul>
+</div>

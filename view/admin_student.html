@@ -1,0 +1,20 @@
+<table class="student_table">
+	<tr>
+		<th>学生头像</th>
+		<th>学生编号</th>
+		<th>学生姓名</th>
+	</tr>
+	{foreach from=$students item=i}
+	<tr>
+		<td>
+			{if $i.student_image eq null || $i.student_image eq ''}
+			<img src="public/img/default.png" />
+			{else}
+			<img src="{$i.student_image}" />
+			{/if}
+		</td>
+		<td>{$i.id}</td>
+		<td>{$i.student_name}</td>
+	</tr>
+	{/foreach}
+</table>

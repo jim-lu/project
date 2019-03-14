@@ -1,0 +1,78 @@
+{include file='view/common/head_for_index.html'}
+<link href="public/css/personal.css?v=1.0" rel="stylesheet" type="text/css" />
+<script>
+$(function() {
+	if(localStorage.getItem("uid") == undefined) {
+		$('.alert_box').css({ 
+			position:'absolute', 
+			left: ($(window).width() - $('.alert_box').outerWidth())/2, 
+			top: ($(window).height() - $('.alert_box').outerHeight())/2 + $(document).scrollTop() 
+		}).fadeIn();
+		setTimeout(() => {
+			window.location = "index.php?control=login";
+		}, 1000);
+	}
+})
+</script>
+<div class="main">
+	<div class="center">
+		<div class="top clearfix">
+			<h2>个人资料 Profile</h2>
+			<a>前往主页</a>
+		</div>
+		<div class="profile">
+			<form id="personal_form">
+				<div class="upload_box clearfix">
+					<div class="preview_box">
+					</div>
+					<div class="button_box">
+						<label class="square">上传头像</label>
+						<input class="avatar" id="avatar" type="file" />
+					</div>
+				</div>
+				<div class="user_info">
+					<div class="name_box clearfix">
+						<label>姓名：</label>
+						<input type="text" id="username" />
+						<b class="warn">姓名不能为空</b>
+					</div>
+					<div class="pwd_box clearfix">
+						<label>密码：</label>
+						<input type="password" id="pwd" />
+					</div>
+					<div class="pwd_box clearfix">
+						<label>确认密码：</label>
+						<input type="password" id="confirm" />
+						<b class="warn">两次密码输入不同</b>
+					</div>
+					<div class="mail_box clearfix">
+						<label>邮箱地址：</label>
+						<input type="text" id="email" />
+						<b class="warn">邮箱格式不正确</b>
+					</div>
+					<div class="content_box clearfix">
+						<label>个人简介：</label>
+						<textarea class="content" id="info"></textarea>
+						<span>0/200</span>
+					</div>
+				</div>
+				<input type="submit" value="确认" id="submit_button" />
+			</form>
+		</div>
+		<div class="course_box">
+			<a href="index.php?control=admin&action=addCourse" id="addCourse">添加课程</a>
+			<div class="panel">
+				<div class="panel_title">所在课程</div>
+				<table class="table" border="1">
+					<tr>
+						<th>课程</th>
+						<th>时间</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="alert_box">请先登录</div>
+</div>
+<script type="text/javascript" src="./public/js/personal.js?v=1.1"></script>
+{include file='view/common/foot.html'}

@@ -1,0 +1,44 @@
+<div class="panel">
+	<h3 style="display: none;">发布资源</h3>
+	<div class="upload_box" style="display: none;">
+		<form class="dropzone clearfix" id="dropzone" enctype="multipart/form-data">
+			<div class="upload_button dz-clickable">
+				<label for="file">上传文件</label>
+				<input type="file" id="file" multiple="multiple" />
+			</div>
+			<div class="course_box">
+				<div class="course_select">
+					<h4>请选择课程&nbsp;<i class="fa fa-caret-down"></i></h4>
+					<ul class="course_select_list">
+						{if $courses}
+						{foreach from=$courses item=i}
+						<li name="{$i.id}">{$i.course_name} {$i.course_time}</li>
+						{/foreach}
+						{/if}
+					</ul>
+					<input type="hidden" class="course_id" />
+					<input type="hidden" class="course_selected" />
+				</div>
+				<span>请选择课程</span>
+			</div>
+			<div class="preview">
+				<!-- template -->
+			</div>
+			<input type="submit" value="点击上传" disabled="disabled" class="submit_button sub_resourses" />
+		</form>
+	</div>
+	<h3>已发布资源</h3>
+	<ul class="resource_list">
+		{if $resources}
+		{foreach from=$resources item=i}
+		<li>
+			<a href="?control=course&action=resourceDetail&time={$i.resource_time}">
+				{$i.resource_first}——{$i.resource_course}
+			</a>
+			<span>发布时间：{$i.resource_time|date_format:"%Y-%m-%d"}</span>
+		</li>
+		{/foreach}
+		{/if}
+	</ul>
+	<div id="page-mark" data-page="1"></div>
+</div>

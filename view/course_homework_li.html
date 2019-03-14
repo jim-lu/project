@@ -1,0 +1,8 @@
+{if $homework}
+{foreach from=$homework item=i}
+	<li>
+		<a href="?control=course&action=homeworkDetail&time={$i.homework_time}">{$i.homework_title}</a>
+		<p>发布时间：{$i.homework_time|date_format:"%Y-%m-%d"}</p>
+	</li>
+{/foreach}
+{/if}

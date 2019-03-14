@@ -1,0 +1,33 @@
+<form id="add_admin">
+	<h4>添加管理员</h4>
+	<div class="line clearfix">
+		<label for="username">用户名：</label>
+		<input type="text" id="username" />
+		<p class="user_warn">用户名不能为空</p>
+	</div>
+	<div class="line clearfix">
+		<label for="pwd">密码：</label>
+		<input type="password" id="pwd" />
+		<p class="pwd_warn">密码必须为6-15位</p>
+	</div>
+	<div class="line clearfix">
+		<label for="confirm">确认密码：</label>
+		<input type="password" id="confirm" />
+		<p class="confirm_warn">两次输入密码不一致</p>
+	</div>
+	<div class="line">
+		<input type="submit" class="add_admin" value="添加" />
+	</div>
+</form>
+<table class="admin_table">
+	<tr>
+		<th>管理员编号</th>
+		<th>管理员用户名</th>
+	</tr>
+	{foreach from=$admin item=i}
+	<tr>
+		<td>{$i.id}</td>
+		<td>{$i.admin_name}</td>
+	</tr>
+	{/foreach}
+</table>

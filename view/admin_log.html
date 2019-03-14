@@ -1,0 +1,21 @@
+{include file='view/common/head_for_log.html'}
+<link href="public/css/admin.css?v=1.2" rel="stylesheet" type="text/css" />
+<div class="login_box">
+	<h2>管理员登录</h2>
+	<form class="login_form">
+		<div class="input_box">
+			<span>姓名</span>
+			<input type="text" placeholder="请输入姓名" id="username" />
+		</div>
+		<p class="username"></p>
+		<div class="input_box">
+			<span>密码</span>
+			<input type="password" placeholder="请输入6-15位数字和字母" id="pwd" />
+		</div>
+		<p class="pwd"></p>
+		<input type="submit" value="登录" />
+	</form>
+	<div class="alert_box"></div>
+</div>
+<script type="text/javascript" src="public/js/admin.js?v=1.7"></script>
+{include file='view/common/foot.html'}

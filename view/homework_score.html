@@ -1,0 +1,51 @@
+{include file='view/common/head_for_index.html'}
+<link href="public/css/score.css?v=1.4" rel="stylesheet" type="text/css" />
+<div class="main">
+	<div class="center">
+		<div class="top">
+			<h2>{$title[0]}——{$student.student_name}</h2>
+			<div class="post_title">
+			</div>
+		</div>
+		<div class="bottom">
+			<h3>教师评分</h3>
+			<table border="1" style="border-color: #3399FF;">
+				<tr>
+					<th>评分</th>
+					<th>修改</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" id="score" placeholder="满分100" value="{$teacher_grade[0]}" size="10" /> 分
+					</td>
+					<td>
+						<button class="modify">修改</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="bottom">
+			<h3>同学互评</h3>
+			<div class="average">
+				平均分：{$average}
+			</div>
+			<table border="1" style="border-color: #3399FF;">
+				<tr>
+					<th>学号</th>
+					<th>课程成员</th>
+					<th>评分</th>
+				</tr>
+				{foreach from=$member item=i}
+				<tr>
+					<td>{$i.course_member_id}</td>
+					<td>{$i.course_member_name}</td>
+					<td>{$i.score[0]}</td>
+				</tr>
+				{/foreach}
+			</table>
+		</div>
+	</div>
+	<div class="alert_box"></div>
+</div>
+<script type="text/javascript" src="./public/js/score.js?v=1.0"></script>
+{include file='view/common/foot.html'}
