@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+
+.main{
+	width: 100%;
+	min-width: 960px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+/*选择排序部分*/
+.sort{
+	width: 900px;
+	padding: 30px 0 10px 0;
+}
+/*列表部分*/
+.course_list{
+	width: 100%;
+	min-width: 960px;
+}
+.course_list .title{
+	width: 100%;
+	min-width: 960px;
+	background-color: #55BBFF;
+}
+.course_list .title h3{
+	width: 900px;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	margin: 0 auto;
+	font-size: 24px;
+	color: #FFFFFF;
+}
+.course_list ul.list{
+	width: 900px;
+	margin: 0 auto;
+}
+.course_list ul.list li{
+	padding: 10px 0;
+	width: 900px;
+}
+.course_list ul.list li .course_img{
+	width: 100px;
+	height: 100px;
+	background-color: #CCCCCC;
+	margin-right: 10px;
+	float: left;
+}
+.course_list ul.list li .course_img img{
+	width: 100px;
+	height: 100px;
+}
+.course_list ul.list li .course_info{
+	float: left;
+}
+.course_list ul.list li .course_info p, 
+.course_list ul.list li .course_info div{
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+}
+.course_list ul.page{
+	margin: 16px auto;
+	height: 32px;
+	text-align: center;
+}
+.course_list ul.page li{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 0 5px;
+	color: #3399FF;
+	border: 1px solid #3399FF;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+.course_list ul.page li.active{
+	color: #FFFFFF;
+	background-color: #3399FF;
+}

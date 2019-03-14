@@ -1,0 +1,189 @@
+@CHARSET "UTF-8";
+/* CSS Document */
+
+body,h1,h2,h3,h4,h5,h6,p,ul,li{
+	margin: 0;
+	padding: 0;
+}
+a{
+	display: block;
+	text-decoration: none;
+	color: #000000;
+}
+img{
+	border: 0;
+}
+ul,li{
+	list-style: none;
+}
+.clearfix{
+	*zoom: 1;
+}
+.clearfix:before, .clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.alert_box{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background-color: #FFFFFF;
+	font-weight: bold;
+	border-radius: 5px;
+	border: 2px solid #3399FF;
+	font-size: 18px;
+	display: none;
+	z-index: 9999;
+}
+.alert_box img{
+	vertical-align: middle;
+}
+
+/*首页头部CSS*/
+.head_guide{
+	width: 100%;
+	min-width: 960px;
+	height: 50px;
+	background-color: #3399FF;
+	position: fixed;
+	z-index: 999;
+}
+.head_guide .head_main{
+	width: 90%;
+	margin: 0 auto;
+}
+.head_guide .head_main .head_left{
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	color: #FFFFFF;
+	float: left;
+	margin-left: 50px;
+}
+.head_guide .head_main .head_left h1{
+	font-size: 24px;
+}
+.head_guide .head_main .head_left h1 a{
+	color: #FFFFFF;
+}
+.head_guide .head_main .head_center{
+	width: 300px;
+	height: 50px;
+	float: left;
+}
+.head_guide .head_main .head_center .search{
+	width: 300px;
+	height: 30px;
+	margin-top: 9px;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+}
+.head_guide .head_main .head_center .search .select{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	border-right: 1px solid #CCCCCC;
+	text-indent: 20px;
+	cursor: pointer;
+	position: relative;
+}
+.head_guide .head_main .head_center .search .select ul.slide_box{
+	width: 80px;
+	position: absolute;
+	top: 30px;
+	left: -1px;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	border-top: none;
+	display: none;
+}
+.head_guide .head_main .head_center .search .select ul.slide_box li:hover{
+	background-color: #CCCCCC;
+}
+.head_guide .head_main .head_center .search input{
+	width: 189px;
+	height: 28px;
+	border: none;
+	outline: none;
+	display: block;
+	float: left;
+}
+.head_guide .head_main .head_center .search img{
+	width: 20px;
+	margin: 5px 0 0 5px;
+	display: block;
+	float: left;
+	cursor: pointer;
+	border: none;
+}
+.head_guide .head_main .head_right{
+	width: 250px;
+	height: 50px;
+	float: right;
+}
+.head_guide .head_main .head_right a{
+	min-width: 50px;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px 10px 0 0;
+	text-decoration: none;
+	color: #FFFFFF;
+	display: block;
+	float: left;
+	cursor: pointer;
+}
+.head_guide .head_main .head_right a:hover{
+	text-decoration: underline;
+}
+.head_guide .head_main .head_right .logged{
+	display: none;
+	color: #FFFFFF;
+}
+.head_guide .head_main .head_right .logged span{
+	display: inline-block;
+	float: left;
+	margin-top: 10px;
+	height: 30px;
+	line-height: 30px;
+}
+
+/*登录注册页面头部CSS*/
+.header{
+	width: 100%;
+	min-width: 960px;
+	height: 120px;
+}
+.header .header_main{
+	width: 90%;
+	height: 100px;
+	padding: 10px 0;
+	margin: 0 auto;
+}
+.header .header_main h1{
+	background: url(../img/head_bg.png) right no-repeat;
+	background-size: 80%;
+}
+.header .header_main h1 img{
+	height: 100px;
+}
+.header .header_main a{
+	width: 300px;
+	height: 100px;
+}
+
+/*底部CSS*/
+.footer{
+	width: 100%;
+	min-width: 960px;
+	padding: 20px 0;
+	text-align: center;
+}

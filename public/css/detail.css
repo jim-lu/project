@@ -1,0 +1,273 @@
+@CHARSET "UTF-8";
+
+.main{
+	width: 100%;
+	min-width: 960px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background-color: #CCCCCC;
+	background-image: url(../img/bg.jpg);
+}
+.center{
+	width: 800px;
+	padding: 10px;
+	margin: 30px auto;
+	background-color: #FFFFFF;
+}
+.center .top{
+	width: 800px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.center .top .left{
+	width: 499px;
+	height: 80px;
+	border-right: 1px solid #CCCCCC;
+	float: left;
+}
+.center .top .left h2{
+	width: 499px;
+	height: 30px;
+	line-height: 30px;
+	text-indent: 20px;
+	font-size: 20px;
+	display: inline-block;
+	margin-top: 5px;
+}
+.center .top .left .post_title{
+	width: 400px;
+	height: 20px;
+	line-height: 20px;
+	text-indent: 20px;
+	font-size: 12px;
+	margin-top: 10px;
+	color: #CCCCCC;
+}
+.center .top .right{
+	width: 300px;
+	float: left;
+}
+.center .top .right img{
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	display: inline-block;
+	float: left;
+	margin: 10px 15px;
+}
+.center .top .right h3{
+	width: 200px;
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+	margin-top: 10px;
+	color: #333333;
+}
+.center .bottom{
+	width: 800px;
+	background-color: #FFFFFF;
+	padding: 20px 0;
+	text-indent: 32px;
+}
+.center .bottom .detail{
+	min-height: 50px;
+}
+.center .bottom .doc{
+	margin-top: 20px;
+}
+.center .bottom .doc li{
+	height: 30px;
+	line-height: 30px;
+}
+.center .bottom .doc i,
+.center .bottom .doc a{
+	display: inline;
+}
+.center .bottom .upload_box, 
+.center .bottom .homework_list{
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #CCCCCC;
+}
+.center .bottom .upload_button{
+	width: 100px;
+	height: 30px;
+	margin: 10px 0 0 32px;
+	position: relative;
+	cursor: pointer;
+	text-indent: 0;
+}
+.center .bottom .upload_button label{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color: #3399FF;
+	font-weight: bold;
+	font-size: 14px;
+	display: inline-block;
+	text-indent: 0;
+}
+.center .bottom .upload_button input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 30px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.preview{
+	width: 500px;
+	min-height: 50px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 20px;
+	text-indent: 0;
+}
+.preview .file .name{
+	width: 180px;
+	height: 30px;
+	line-height: 30px;
+	fone-size: 12px;
+	float: left;
+}
+.preview .file .progress{
+	width: 200px;
+	height: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+	float: left;
+	background-color: #CCCCCC;
+}
+.preview .file .progress .progressBar{
+	width: 0;
+	height: 10px;
+	background-color: #3399FF;
+	border-radius: 10px;
+	-webkit-animation: animate 1.5s linear 0s forwards;
+	-moz-animation: animate 1.5s linear 0s forwards;
+	animation: animate 1.5s linear 0s forwards;
+}
+.preview .file .done{
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-left: 20px;
+	text-align: center;
+	line-height: 30px;
+}
+.preview .file .done img{
+	-webkit-animation: finish 1s linear 2s both;
+	-moz-animation: finish 1s linear 2s both;
+	animation: finish 1s linear 2s both;
+}
+@-webkit-keyframes animate{
+	from{
+		width: 0;
+	}
+	to{
+		width: 200px;
+	}
+}
+@-moz-keyframes animate{
+	from{
+		width: 0;
+	}
+	to{
+		width: 200px;
+	}
+}
+@keyframes animate{
+	from{
+		width: 0;
+	}
+	to{
+		width: 200px;
+	}
+}
+@-webkit-keyframes finish{
+	0%{
+		-webkit-transform: scale(0);
+	}
+	50%{
+		-webkit-transform: scale(0.5);
+	}
+	100%{
+		-webkit-transform: scale(1);
+	}
+}
+@-moz-keyframes finish{
+	0%{
+		transform: scale(0);
+	}
+	50%{
+		transform: scale(0.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+@keyframes finish{
+	0%{
+		transform: scale(0);
+	}
+	50%{
+		transform: scale(0.5);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+.upload_box .submit_button{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	font-weight: bold;
+	margin: 20px 0 0 32px;
+	color: #FFFFFF;
+	background-color: #50C602;
+	cursor: pointer;
+	font-size: 14px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+table{
+	width: 750px;
+	margin: 20px auto;
+	text-align: center;
+}
+table tr{
+	text-indent: 0;
+}
+table tr th{
+	width: 200px;
+}
+table i,
+table a{
+	display: inline;
+}
+table input{
+	height: 24px;
+	line-height: 24px;
+	border-radius: 5px;
+	border: 1px solid #3399FF;
+}
+.stu_submit, 
+.teacher_submit{
+	width: 50px;
+	height: 24px;
+	line-height: 24px;
+	color: #FFFFFF;
+	background-color: #3399FF;
+	border: none;
+	font-size: 14px;
+	cursor: pointer;
+}
+.check_score{
+	color: #3399FF;
+}
+.check_score:hover{
+	text-decoration: underline;
+}

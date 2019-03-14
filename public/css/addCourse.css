@@ -1,0 +1,152 @@
+@CHARSET "UTF-8";
+
+.main{
+	width: 100%;
+	min-width: 960px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background: url(../img/bg.jpg);
+}
+.center{
+	width: 800px;
+	margin: 20px auto;
+	padding: 20px 20px 0 20px;
+	background-color: #FFFFFF;
+}
+.center .back{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #50C602;
+	border-radius: 5px;
+	text-align: center;
+}
+.center h2{
+	height: 50px;
+	line-height: 50px;
+	margin: 20px 0;
+}
+.center .line{
+	height: 50px;
+	line-height: 50px;
+}
+.center .line .warn{
+	color: #FF0000;
+	font-size: 12px;
+	display: none;
+}
+.center .line_2{
+	height: 150px;
+	position: relative;
+}
+.center .line_2 label,
+.center .line_3 label,
+.center .line_7 label{
+	float: left;
+	display: inline-block;
+}
+.center .square{
+	width: 120px;
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+	font-size: 12px;
+	color: #CCCCCC;
+	border: 1px solid #3399FF;
+	float: left;
+	margin-left: 8px;
+}
+.center .square img{
+	width: 120px;
+	height: 120px;
+}
+#course_img{
+	position: absolute;
+	top: 0;
+	left: 88px;
+	width: 120px;
+	height: 120px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	cursor: pointer;
+}
+.center .line_4,
+.center .line_5{
+	height: 300px;
+}
+section{
+	width: 80%;
+    margin: auto;
+    text-align: left;
+}
+.center .line_6{
+	height: 100px;
+}
+.center .line_8{
+	min-height: 300px;
+}
+.center .line_8 table{
+	width: 650px;
+	text-align: center;
+	margin: 0 auto;
+}
+.center .line_8 table tr{
+	height: 24px;
+	line-height: 24px;
+}
+.center .line_8 table tr td:hover{
+	cursor: pointer;
+	color: #FFFFFF;
+	background-color: #3399FF;
+}
+.center .line_8 table tr td.active{
+	color: #FFFFFF;
+	background-color: #3399FF;
+}
+#submit{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	border: none;
+	border-radius: 5px;
+	background-color: #3399FF;
+	color: #FFFFFF;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+	margin: 10px auto;
+	display: block;
+}
+#editor_1, 
+#editor_2{
+	overflow-y: auto;
+}
+#course_name{
+	width: 200px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #3399FF;
+	border-radius: 5px;
+}
+.mask{
+	width: 200px;
+	height: 26px;
+	line-height: 24px;
+	display: inline-block;
+	border: 1px solid #3399FF;
+	border-radius: 5px;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-left: 8px;
+	position: relative;
+}
+select{
+	position: absolute;
+	width: 200px;
+	border: none;
+	top: 3px;
+	left: 0;
+	outline: none;
+}

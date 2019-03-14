@@ -1,0 +1,418 @@
+@CHARSET "UTF-8";
+
+.main{
+	width: 100%;
+	min-width: 960px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+ul.page{
+	margin: 16px auto;
+	height: 32px;
+	text-align: center;
+}
+ul.page li{
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 0 5px;
+	color: #3399FF;
+	border: 1px solid #3399FF;
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+ul.page li.active{
+	color: #FFFFFF;
+	background-color: #3399FF;
+}
+.modify{
+	width: 60px;
+	height: 24px;
+	line-height: 24px;
+	border: none;
+	color: #FFFFFF;
+	background-color: #3399FF;
+	cursor: pointer;
+}
+#add_course, 
+#add_term{
+	width: 150px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	background-color: #50C602;
+	color: #FFFFFF;
+	margin-left: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+/*侧边栏*/
+.side_box{
+	width: 18%;
+	float: left;
+	margin-top: 20px;
+	border: 1px solid #3399FF;
+	border-radius: 5px;
+	padding: 2px;
+	background-color: #3399FF;
+}
+.side_box h2{
+	font-size: 20px;
+	width: 100%;
+	height: 50px;
+	display: block;
+	line-height: 50px;
+	text-indent: 20px;
+	color: #FFFFFF;
+	background-color: #3399FF;
+}
+.side_box ul li{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+	background-color: #3399FF;
+	cursor: pointer;
+}
+.side_box ul li.active{
+	color: #000000;
+	background-color: #FFFFFF;
+}
+.side_box ul li:hover{
+	color: #000000;
+	background-color: #FFFFFF;
+}
+/*中心内容*/
+.main_box{
+	width: 75%;
+	float: left;
+	margin-top: 20px;
+	margin-left: 2%;
+	border: 1px solid #3399FF;
+	border-radius: 5px;
+}
+
+/*课程内容*/
+.line-1{
+	width: 500px;
+	height: 150px;
+	margin: 20px;
+}
+.line-1 span{
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	float: left;
+}
+.line-1 .term_box{
+	display: inline-block;
+	float: left;
+	position: relative;
+}
+.line-1 ul{
+	position: absolute;
+	width: 198px;
+	border-radius: 5px;
+	top: 24px;
+	left: 0;
+	padding-top: 10px;
+	background-color: #3399FF;
+	border: 1px solid #3399FF;
+	text-align: center;
+	color: #FFFFFF;
+	z-index: 999;
+	display: none;
+}
+.line-1 ul li{
+	height: 24px;
+	line-height: 24px;
+	cursor: pointer;
+}
+.line-1 ul li:hover{
+	background-color: #FFFFFF;
+	color: #3399FF;
+}
+.line-1 h4{
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px;
+	color: #FFFFFF;
+	background-color: #3399FF;
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+}
+.filter{
+	width: 500px;
+	margin: 20px;
+	position: relative;
+}
+.filter label{
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	float: left;
+}
+.filter h3{
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 5px;
+	color: #FFFFFF;
+	background-color: #3399FF;
+	cursor: pointer;
+	display: inline-block;
+	float: left;
+	border: 1px solid #3399FF;
+}
+.filter h3 p{
+	display: inline-block;
+	float: left;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 10px;
+	font-size: 14px;
+}
+.filter h3 i{
+	display: inline-block;
+	float: left;
+	margin-top: 8px;
+}
+.filter ul{
+	display: inline-block;
+	width: 200px;
+	padding-top: 5px;
+	display: none;
+	position: absolute;
+	background-color: #3399FF;
+	top: 25px;
+	left: 80px;
+	border-radius: 5px;
+	border: 1px solid #3399FF;
+}
+.filter ul li{
+	height: 30px;
+	line-height: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	cursor: pointer;
+}
+.filter ul li:hover{
+	background-color: #FFFFFF;
+	color: #3399FF;
+}
+.course_box{
+	margin: 40px auto 20px;
+	width: 800px;
+}
+.course_box table{
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid #3399FF;
+}
+.course_box table tr{
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #3399FF;
+}
+.course_box table tr th{
+	width: 150px;
+	border: 1px solid #3399FF;
+}
+.course_box table tr td{
+	border: 1px solid #3399FF;
+}
+.course_box .edit_button{
+	width: 60px;
+	height: 24px;
+	line-height: 24px;
+	color: #FFFFFF;
+	cursor: pointer;
+	background-color: #3399FF;
+	display: inline-block;
+	margin: 5px auto;
+}
+.course_box .delete{
+	background-color: #FF0000;
+}
+
+/*教师内容*/
+.teacher_table{
+	margin: 20px auto;
+	text-align: center;
+	border: 1px solid #3399FF;
+}
+.teacher_table tr{
+	min-height: 30px;
+	line-height: 30px;
+	border: 1px solid #3399FF;
+}
+.teacher_table tr th,
+.teacher_table tr td{
+	width: 150px;
+	border: 1px solid #3399FF;
+}
+
+/*学生内容*/
+.student_table{
+	margin: 20px auto;
+	text-align: center;
+	border: 1px solid #3399FF;
+}
+.student_table tr{
+	min-height: 30px;
+	line-height: 30px;
+	border: 1px solid #3399FF;
+}
+.student_table tr th,
+.student_table tr td{
+	width: 150px;
+	border: 1px solid #3399FF;
+}
+td img{
+	width: 100px;
+	height: 100px;
+}
+
+/*登录页面CSS*/
+.login_box{
+	width: 90%;
+	min-width: 960px;
+	margin: 10px auto;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	background-color: #F1F1F1;
+}
+.login_box h2{
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.login_box .input_box{
+	width: 400px;
+	height: 48px;
+	border: 1px solid #CCCCCC;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	margin: 0 auto;
+	text-indent: 10px;
+}
+.login_box .input_box span{
+	height: 48px;
+	line-height: 48px;
+}
+.login_box .input_box input[type=text], 
+.login_box .input_box input[type=password]{
+	width: 320px;
+	height: 36px;
+	margin-left: 5px;
+	font-size: 14px;
+	border: none;
+	outline: none;
+}
+.login_box input[type=submit]{
+	width: 400px;
+	height: 48px;
+	border: 1px solid #3399FF;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	margin: 20px auto;
+	display: block;
+	font-size: 22px;
+	color: #3399FF;
+	cursor: pointer;
+}
+.login_box input[type=submit]:hover{
+	color: #55BBFF;
+	border: 1px solid #55BBFF;
+}
+.login_box p{
+	width: 400px;
+	height: 20px;
+	line-height: 20px;
+	margin: 0 auto;
+	font-size: 12px;
+	color: #FF0000;
+	text-indent: 10px;
+}
+
+/*管理员信息页面*/
+#add_admin{
+	width: 700px;
+	margin: 20px auto;
+	display: block;
+}
+.line{
+	height: 50px;
+	line-height: 50px;
+}
+.line label{
+	width: 100px;
+	text-align: right;
+	display: inline-block;
+	float: left;
+}
+.line input{
+	width: 200px;
+	height: 24px;
+	line-height: 24px;
+	border-radius: 5px;
+	border: 1px solid #3399FF;
+	margin: 13px 0 0 10px;
+	float: left;
+	display: inline-block
+}
+.line p{
+	width: 200px;
+	height: 50px;
+	display: inline-block;
+	float: left;
+	font-size: 12px;
+	margin-left: 10px;
+	color: #FF0000;
+	display: none;
+}
+.line .add_admin{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #3399FF;
+	color: #FFFFFF;
+	margin: 5px auto;
+	display: block;
+	border: none;
+	border-radius: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	float: none;
+}
+.admin_table{
+	margin: 20px auto;
+	text-align: center;
+	border: 1px solid #3399FF;
+}
+.admin_table tr{
+	min-height: 30px;
+	line-height: 30px;
+	border: 1px solid #3399FF;
+}
+.admin_table tr th,
+.admin_table tr td{
+	width: 150px;
+	border: 1px solid #3399FF;
+}
